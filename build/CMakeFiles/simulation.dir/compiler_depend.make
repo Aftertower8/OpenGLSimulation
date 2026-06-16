@@ -118,6 +118,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
@@ -136,6 +137,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
@@ -154,6 +156,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -162,6 +165,18 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -172,6 +187,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
   /usr/include/features.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -190,9 +206,18 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -305,7 +330,17 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -317,11 +352,33 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/time.h:
 
+/usr/include/sched.h:
+
+/usr/include/locale.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/c++/13/type_traits:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
+/usr/include/c++/13/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
 /usr/include/c++/13/bits/basic_ios.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/c++/13/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/c++/13/bits/alloc_traits.h:
 
@@ -343,17 +400,21 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
 /usr/include/c++/13/bits/basic_string.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/locale.h:
+/usr/include/c++/13/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -423,11 +484,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/c++/13/cerrno:
-
 /usr/include/stdlib.h:
-
-/usr/include/c++/13/type_traits:
 
 /usr/include/dlfcn.h:
 
@@ -435,7 +492,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/13/new:
 
@@ -485,6 +542,8 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
+/usr/include/c++/13/tr1/exp_integral.tcc:
+
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/c++/13/bits/memory_resource.h:
@@ -494,6 +553,8 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/stdio.h:
 
@@ -535,6 +596,8 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/c++/13/bits/ios_base.h:
 
+/usr/include/c++/13/tr1/bessel_function.tcc:
+
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
@@ -557,19 +620,23 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
+/usr/include/c++/13/bits/specfun.h:
+
 /usr/include/c++/13/cwctype:
 
 /usr/include/c++/13/bits/postypes.h:
 
 /usr/include/c++/13/bits/predefined_ops.h:
 
+/usr/include/pthread.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/13/bits/ptr_traits.h:
+
 /usr/include/c++/13/cstddef:
 
 /usr/include/c++/13/bits/range_access.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/ctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
@@ -607,11 +674,15 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/c++/13/bits/stl_pair.h:
 
+/usr/include/math.h:
+
 /usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
 /usr/include/c++/13/clocale:
+
+/usr/include/c++/13/cmath:
 
 /usr/include/c++/13/cstdio:
 
@@ -621,9 +692,15 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/c++/13/ext/atomicity.h:
 
+/usr/include/c++/13/limits:
+
 /usr/include/c++/13/ext/numeric_traits.h:
 
 /usr/include/c++/13/ext/type_traits.h:
+
+/usr/include/errno.h:
+
+/usr/include/c++/13/initializer_list:
 
 /usr/include/c++/13/iostream:
 
@@ -635,8 +712,6 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/c++/13/string:
 
-/usr/include/c++/13/typeinfo:
-
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/13/string_view:
@@ -645,18 +720,18 @@ CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main
 
 /usr/include/c++/13/system_error:
 
-/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
+
+/usr/include/c++/13/tr1/ell_integral.tcc:
 
 /usr/include/c++/13/tuple:
 
-/usr/include/c++/13/initializer_list:
+/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
 
-/usr/include/errno.h:
+/usr/include/c++/13/tr1/gamma.tcc:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/include/c++/13/cerrno:
 
-/usr/include/c++/13/bits/ptr_traits.h:
-
-/usr/include/pthread.h:
-
-/usr/include/sched.h:
+/usr/include/c++/13/tr1/hypergeometric.tcc:
