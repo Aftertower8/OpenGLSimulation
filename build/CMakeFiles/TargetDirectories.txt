@@ -1,3 +1,0 @@
-/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles/simulation.dir
-/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles/edit_cache.dir
-/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles/rebuild_cache.dir
