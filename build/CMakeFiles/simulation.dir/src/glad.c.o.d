@@ -1,6 +1,6 @@
 CMakeFiles/simulation.dir/src/glad.c.o: \
- /home/aleksander/Projekty/Sim/src/glad.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
+ /home/olek/Programowanie/OpenGLSimulation/src/glad.c \
+ /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -51,8 +51,9 @@ CMakeFiles/simulation.dir/src/glad.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /home/aleksander/Projekty/Sim/include/glad/glad.h \
- /home/aleksander/Projekty/Sim/include/KHR/khrplatform.h \
+ /usr/include/strings.h \
+ /home/olek/Programowanie/OpenGLSimulation/include/glad/glad.h \
+ /home/olek/Programowanie/OpenGLSimulation/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \

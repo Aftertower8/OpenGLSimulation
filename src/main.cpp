@@ -35,11 +35,17 @@ int main(){
 	//Vertices coordinates <-1;1>
 	GLfloat vertices[] = {
 		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
-		0.0f, -0.5f * float(sqrt(3)) / 3, 0.0f,
-		0.0f, 0.5f * float(sqrt(3)) / 3, 0.0f,
-		-0.5f, 0.5f * float(sqrt(3)) / 3, 0.0f,
-		0.0f, 0.5f * float(sqrt(3)) / 3, 0.0f,
-		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f
+		0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
+		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f,
+		-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f,
+		0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f,
+		0.0f, -0.5f * float(sqrt(3)) / 3, 0.0f
+	};
+
+	GLuint indeces[] = {
+		0, 3, 5, //lower left triangle
+		3, 2, 4, //lower right triangle
+		5, 4, 1 //upper triangle
 	};
 
 	//Create GLFWwindow object WIDTH x HEIGHT, named SIM
@@ -87,11 +93,12 @@ int main(){
 	
 
 	//Create reference containers for the Vertex Array Object and the Vertex Buffer Object
-	GLuint VAO, VBO;
+	GLuint VAO, VBO, EBO;
 
 	//Generate the VAO and VBO with only 1 object each
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
+	glGenBuffers(1, &EBO);
 
 	//Make the VAO the current Vertex Array Object by binding it
 	glBindVertexArray(VAO);
@@ -101,6 +108,9 @@ int main(){
 	//Introduce the vertices into the VBO
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indeces), indeces, GL_STATIC_DRAW);
+
 	//Configure the Vertex Attribute so that OpenGL knows how to read to VBO
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*)0);
 	//Enable the Vertex Attribute so that OpenGL knows how to use it
@@ -109,6 +119,7 @@ int main(){
 	//Bind both the VBO and VAO to 0 so that we don't accidentally modify them
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 
 	//Specify background color
@@ -127,8 +138,8 @@ int main(){
 		//Bind the VAO so OpenGL knows how to use it
 		glBindVertexArray(VAO);
 		//Draw the triangle using the GL_TRIANGLES primitive
-		glDrawArrays(GL_TRIANGLES, 0, 3);
-		glDrawArrays(GL_TRIANGLES, 3, 6);
+		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
+		//Swap the back buffer with the front buffer
 		glfwSwapBuffers(window);
 		//Take care of all GLFW elements
 		glfwPollEvents();
@@ -137,6 +148,7 @@ int main(){
 	//Delete all the objects we've created
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
+	glDeleteProgram(shaderProgram);
 	glDeleteProgram(shaderProgram);
 
 	glfwDestroyWindow(window);

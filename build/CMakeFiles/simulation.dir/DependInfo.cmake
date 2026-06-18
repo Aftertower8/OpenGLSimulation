@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/aleksander/Projekty/Sim/src/glad.c" "CMakeFiles/simulation.dir/src/glad.c.o" "gcc" "CMakeFiles/simulation.dir/src/glad.c.o.d"
-  "/home/aleksander/Projekty/Sim/src/main.cpp" "CMakeFiles/simulation.dir/src/main.cpp.o" "gcc" "CMakeFiles/simulation.dir/src/main.cpp.o.d"
+  "/home/olek/Programowanie/OpenGLSimulation/src/glad.c" "CMakeFiles/simulation.dir/src/glad.c.o" "gcc" "CMakeFiles/simulation.dir/src/glad.c.o.d"
+  "/home/olek/Programowanie/OpenGLSimulation/src/main.cpp" "CMakeFiles/simulation.dir/src/main.cpp.o" "gcc" "CMakeFiles/simulation.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

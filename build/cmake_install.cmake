@@ -1,4 +1,4 @@
-# Install script for directory: /home/aleksander/Projekty/Sim
+# Install script for directory: /home/olek/Programowanie/OpenGLSimulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/aleksander/Projekty/Sim/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/olek/Programowanie/OpenGLSimulation/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

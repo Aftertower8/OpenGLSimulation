@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/st/stm32cubeclt_1.20.0/CMake/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/st/stm32cubeclt_1.20.0/CMake/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aleksander/Projekty/Sim
+CMAKE_SOURCE_DIR = /home/olek/Programowanie/OpenGLSimulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aleksander/Projekty/Sim/build
+CMAKE_BINARY_DIR = /home/olek/Programowanie/OpenGLSimulation/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/simulation.dir/clean
 CMakeFiles/simulation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aleksander/Projekty/Sim/build/CMakeFiles --progress-num=1,2,3 "Built target simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles --progress-num=1,2,3 "Built target simulation"
 .PHONY : CMakeFiles/simulation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/simulation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aleksander/Projekty/Sim/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/simulation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aleksander/Projekty/Sim/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles 0
 .PHONY : CMakeFiles/simulation.dir/rule
 
 # Convenience name for target.

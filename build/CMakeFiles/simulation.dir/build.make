@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/st/stm32cubeclt_1.20.0/CMake/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/st/stm32cubeclt_1.20.0/CMake/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aleksander/Projekty/Sim
+CMAKE_SOURCE_DIR = /home/olek/Programowanie/OpenGLSimulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aleksander/Projekty/Sim/build
+CMAKE_BINARY_DIR = /home/olek/Programowanie/OpenGLSimulation/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/simulation.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/simulation.dir/progress.make
 include CMakeFiles/simulation.dir/flags.make
 
 CMakeFiles/simulation.dir/src/main.cpp.o: CMakeFiles/simulation.dir/flags.make
-CMakeFiles/simulation.dir/src/main.cpp.o: /home/aleksander/Projekty/Sim/src/main.cpp
+CMakeFiles/simulation.dir/src/main.cpp.o: /home/olek/Programowanie/OpenGLSimulation/src/main.cpp
 CMakeFiles/simulation.dir/src/main.cpp.o: CMakeFiles/simulation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksander/Projekty/Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulation.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulation.dir/src/main.cpp.o -MF CMakeFiles/simulation.dir/src/main.cpp.o.d -o CMakeFiles/simulation.dir/src/main.cpp.o -c /home/aleksander/Projekty/Sim/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulation.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulation.dir/src/main.cpp.o -MF CMakeFiles/simulation.dir/src/main.cpp.o.d -o CMakeFiles/simulation.dir/src/main.cpp.o -c /home/olek/Programowanie/OpenGLSimulation/src/main.cpp
 
 CMakeFiles/simulation.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aleksander/Projekty/Sim/src/main.cpp > CMakeFiles/simulation.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/olek/Programowanie/OpenGLSimulation/src/main.cpp > CMakeFiles/simulation.dir/src/main.cpp.i
 
 CMakeFiles/simulation.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aleksander/Projekty/Sim/src/main.cpp -o CMakeFiles/simulation.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/olek/Programowanie/OpenGLSimulation/src/main.cpp -o CMakeFiles/simulation.dir/src/main.cpp.s
 
 CMakeFiles/simulation.dir/src/glad.c.o: CMakeFiles/simulation.dir/flags.make
-CMakeFiles/simulation.dir/src/glad.c.o: /home/aleksander/Projekty/Sim/src/glad.c
+CMakeFiles/simulation.dir/src/glad.c.o: /home/olek/Programowanie/OpenGLSimulation/src/glad.c
 CMakeFiles/simulation.dir/src/glad.c.o: CMakeFiles/simulation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aleksander/Projekty/Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/simulation.dir/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/simulation.dir/src/glad.c.o -MF CMakeFiles/simulation.dir/src/glad.c.o.d -o CMakeFiles/simulation.dir/src/glad.c.o -c /home/aleksander/Projekty/Sim/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/simulation.dir/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/simulation.dir/src/glad.c.o -MF CMakeFiles/simulation.dir/src/glad.c.o.d -o CMakeFiles/simulation.dir/src/glad.c.o -c /home/olek/Programowanie/OpenGLSimulation/src/glad.c
 
 CMakeFiles/simulation.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/simulation.dir/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksander/Projekty/Sim/src/glad.c > CMakeFiles/simulation.dir/src/glad.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olek/Programowanie/OpenGLSimulation/src/glad.c > CMakeFiles/simulation.dir/src/glad.c.i
 
 CMakeFiles/simulation.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/simulation.dir/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksander/Projekty/Sim/src/glad.c -o CMakeFiles/simulation.dir/src/glad.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olek/Programowanie/OpenGLSimulation/src/glad.c -o CMakeFiles/simulation.dir/src/glad.c.s
 
 # Object files for target simulation
 simulation_OBJECTS = \
@@ -112,7 +112,7 @@ simulation: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 simulation: /usr/lib/x86_64-linux-gnu/libGLX.so
 simulation: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 simulation: CMakeFiles/simulation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aleksander/Projekty/Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable simulation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/simulation.dir/clean:
 .PHONY : CMakeFiles/simulation.dir/clean
 
 CMakeFiles/simulation.dir/depend:
-	cd /home/aleksander/Projekty/Sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aleksander/Projekty/Sim /home/aleksander/Projekty/Sim /home/aleksander/Projekty/Sim/build /home/aleksander/Projekty/Sim/build /home/aleksander/Projekty/Sim/build/CMakeFiles/simulation.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/olek/Programowanie/OpenGLSimulation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/olek/Programowanie/OpenGLSimulation /home/olek/Programowanie/OpenGLSimulation /home/olek/Programowanie/OpenGLSimulation/build /home/olek/Programowanie/OpenGLSimulation/build /home/olek/Programowanie/OpenGLSimulation/build/CMakeFiles/simulation.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/simulation.dir/depend
 

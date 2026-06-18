@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/aleksander/Projekty/Sim/include
+C_INCLUDES = -I/home/olek/Programowanie/OpenGLSimulation/include
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/aleksander/Projekty/Sim/include
+CXX_INCLUDES = -I/home/olek/Programowanie/OpenGLSimulation/include
 
 CXX_FLAGS = 
 

@@ -1,6 +1,7 @@
 CMakeFiles/simulation.dir/src/main.cpp.o: \
- /home/aleksander/Projekty/Sim/src/main.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
+ /home/olek/Programowanie/OpenGLSimulation/src/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -149,8 +150,8 @@ CMakeFiles/simulation.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/aleksander/Projekty/Sim/include/glad/glad.h \
- /home/aleksander/Projekty/Sim/include/KHR/khrplatform.h \
+ /home/olek/Programowanie/OpenGLSimulation/include/glad/glad.h \
+ /home/olek/Programowanie/OpenGLSimulation/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
