@@ -17,6 +17,8 @@ class Shader{
 
 		void Activate();
 		void Delete();
+	private:
+		void compileErrors(unsigned int shader, const std::string type);
 };
 
 #endif
