@@ -10,7 +10,7 @@ class VAO{
 		VAO();
 
 		void LinkAttrib(
-			VBO VBO,
+			VBO &VBO,
 			GLuint layout,
 			GLuint numComponents,
 			GLenum type,

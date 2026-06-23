@@ -13,6 +13,7 @@ add_library(core
 	src/VAO.cpp
 	src/VBO.cpp
 	src/EBO.cpp
+	src/stb.cpp
 	)
 
 add_executable(${PROJECT_NAME} src/main.cpp src/glad.c)
