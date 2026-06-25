@@ -66,14 +66,14 @@ void Shader::compileErrors(unsigned int shader, const std::string type){
 		glGetShaderiv(shader, GL_COMPILE_STATUS, &isCompiled);
 		if(isCompiled == GL_FALSE){
 			glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-			std::cout << type << "\n" << infoLog << "\n";
+			std::cout << "ERROR::SHADER::" << type << "::COMPILATION_FAILED\n" << infoLog << std::endl;
 		}
 	}
 	else{
-		glGetProgramiv(shader, GL_COMPILE_STATUS, &isCompiled);
+		glGetProgramiv(shader, GL_LINK_STATUS, &isCompiled);
 		if(isCompiled == GL_FALSE){
 			glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-			std::cout << type << "\n" << infoLog << "\n";
+			std::cout << "ERROR::SHADER_PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
 		}
 	}
 }

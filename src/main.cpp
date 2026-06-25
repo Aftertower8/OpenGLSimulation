@@ -2,6 +2,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <cmath>
+#include <vector>
+#include <glm/glm.hpp>
 
 #include "shaderClass.h"
 #include "VAO.h"
@@ -10,6 +12,32 @@
 
 #define WIDTH 800
 #define HEIGHT 800
+
+class Circle{
+	public:
+		Circle(float radius, int step){
+			this->radius = radius;
+			this->step = step;
+			setVertices();
+		}
+		void initGL(){
+			vao.Bind();
+		}
+	private:
+		std::vector<glm::vec3> vertices;
+		float radius;
+		int step;
+		VAO vao;
+		VBO vbo;
+		void setVertices(){
+			vertices.resize(step+1);
+			vertices[0] = glm::vec3{0.0f, 0.0f, 0.0f};
+			for(int i=1; i<=step; i++){
+				double angle = 2.0f * M_PI / step * i;
+				vertices[i] = glm::vec3{radius * cos(angle), radius * sin(angle), 0.0f};
+			}
+		}
+};
 
 //Vertices coordinates <-1;1>
 	GLfloat vertices[] = {
@@ -62,7 +90,8 @@ int main(){
 	VAO VAO1;
 	VAO1.Bind();
 
-	VBO VBO1(vertices, sizeof(vertices));
+	VBO VBO1;
+	VBO1.Upload(vertices, sizeof(vertices));
 	EBO EBO1(indices, sizeof(indices));
 
 	VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
