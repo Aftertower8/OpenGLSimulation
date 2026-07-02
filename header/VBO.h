@@ -7,6 +7,7 @@ class VBO{
 	public:
 		GLuint ID;
 		VBO();
+		~VBO();
 		void Upload(GLfloat* vertices, GLsizeiptr size);
 		void Bind();
 		void Unbind();

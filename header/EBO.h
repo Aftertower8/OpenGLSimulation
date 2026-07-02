@@ -7,6 +7,7 @@ class EBO{
 	public:
 		GLuint ID;
 		EBO();
+		~EBO();
 		void Upload(GLuint* indices, GLsizeiptr size);
 		void Bind();
 		void Unbind();

@@ -4,6 +4,8 @@
 #include <cmath>
 #include <vector>
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "shaderClass.h"
 #include "VAO.h"
@@ -31,13 +33,10 @@ class Circle{
 			ebo.Unbind();
 		}
 		void drawGL(){
+			//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 			vao.Bind();
 			glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
-		}
-		void deleteGL(){
-			vao.Bind();
-			vbo.Delete();
-			ebo.Delete();
+			vao.Unbind();
 		}
 	private:
 		std::vector<glm::vec3> vertices;
@@ -67,22 +66,45 @@ class Circle{
 		}
 };
 
-//Vertices coordinates <-1;1>
-	GLfloat vertices[] = {
-		-0.5f, 	-0.5f * float(sqrt(3)) / 3, 	0.0f,	0.8f, 0.3f, 0.02f,	//lower left corner
-		0.5f, 	-0.5f * float(sqrt(3)) / 3, 	0.0f,	0.8f, 0.3f, 0.02f,	//lower right corner
-		0.0f, 	0.5f * float(sqrt(3)) * 2 / 3, 	0.0f,	1.0f, 0.6f, 0.32f,	//upper corner
-		-0.25f, 0.5f * float(sqrt(3)) / 6, 		0.0f,	0.9f, 0.45f, 0.17f,	//inner left
-		0.25f, 	0.5f * float(sqrt(3)) / 6, 		0.0f,	0.9f, 0.45f, 0.17f,	//inner right
-		0.0f, 	-0.5f * float(sqrt(3)) / 3, 	0.0f,	0.8f, 0.3f, 0.02f	//inner down
-	};
 
-	GLuint indices[] = {
-		0, 3, 5, //lower left triangle
-		3, 2, 4, //lower right triangle
-		5, 4, 1 //upper triangle
-	};
+void run(GLFWwindow *window){
+	Shader shaderProgram("../resources/shaders/default.vert", "../resources/shaders/default.frag");
 
+	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
+
+	Circle kolo(0.5, 3);
+	kolo.initGL();
+
+	//Main while loop
+	while(!glfwWindowShouldClose(window)){
+		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);	
+		//Tell OpenGL thich shader program we want to use
+		shaderProgram.Activate();
+		//only after activating shaderProgram
+		glm::mat4 trans = glm::mat4(1.0f);
+		//trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
+		//trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
+		trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+		trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+		unsigned int transformLoc = glGetUniformLocation(shaderProgram.ID, "transform");
+		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
+		//Bind the VAO so OpenGL knows how to use it
+		//VAO1.Bind();
+		//Draw the triangle using the GL_TRIANGLES primitive
+		//glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
+		//Swap the back buffer with the front buffer
+		//circle class test:
+		kolo.drawGL();
+
+
+		glfwSwapBuffers(window);
+		//Take care of all GLFW elements
+		glfwPollEvents();
+	}
+
+	shaderProgram.Delete();
+}
 
 int main(){
 	//init GLFW
@@ -113,57 +135,7 @@ int main(){
 	//y = <0;HEIGHT>
 	glViewport(0, 0, WIDTH, HEIGHT);
 	
-	Shader shaderProgram("../resources/shaders/default.vert", "../resources/shaders/default.frag");
-	/*
-	VAO VAO1;
-	VAO1.Bind();
-
-	VBO VBO1;
-	VBO1.Upload(vertices, sizeof(vertices));
-	EBO EBO1;
-	EBO1.Upload(indices, sizeof(indices));
-
-	VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
-	VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-
-	VAO1.Unbind();
-	VBO1.Unbind();
-	EBO1.Unbind();
-	*/
-
-	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
-
-	Circle kolo(0.2, 30);
-	kolo.initGL();
-
-	//Main while loop
-	while(!glfwWindowShouldClose(window)){
-		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);	
-		//Tell OpenGL thich shader program we want to use
-		shaderProgram.Activate();
-		//only after activating shaderProgram
-		glUniform1f(uniID, 0.1);
-		//Bind the VAO so OpenGL knows how to use it
-		//VAO1.Bind();
-		//Draw the triangle using the GL_TRIANGLES primitive
-		//glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
-		//Swap the back buffer with the front buffer
-		//circle class test:
-		kolo.drawGL();
-
-
-		glfwSwapBuffers(window);
-		//Take care of all GLFW elements
-		glfwPollEvents();
-	}
-
-	//Delete all the objects we've created
-	//VAO1.Delete();
-	//VBO1.Delete();
-	//EBO1.Delete();
-	kolo.deleteGL();
-	shaderProgram.Delete();
+	run(window);
 
 	glfwDestroyWindow(window);
 	glfwTerminate();
